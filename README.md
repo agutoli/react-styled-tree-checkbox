@@ -10,7 +10,7 @@ Up to date with react/react-dom `16.7.0` and styled-components `4.1.3`
 `npm install react-styled-tree-checkbox --save`
 
 #### Screenshot Example
-![](https://i.ibb.co/9g04sLw/Screen-Shot-2018-12-22-at-18-52-43.png)
+![](https://i.ibb.co/hyMgSJ4/Screen-Shot-2018-12-22-at-19-17-03.png)
 
 ## Example Usage
 
