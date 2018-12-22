@@ -29,6 +29,8 @@ const nodes = [
   ]),
 ]
 
+console.log(JSON.stringify(nodes, null, 2))
+
 storiesOf('Molecule/TreeCheckbox', module)
   .add('showToggleText=true', () => (
     <div style={{margin: '20px', width: '100%'}}>
