@@ -30,10 +30,6 @@ Up to date with react/react-dom `16.2.0` and styled-components `4.1.1`
       ...
     ]
 
-    class MyComp extends React.Component {
-      render() {
-        return (
-          <TreeCheckbox nodes={nodes} showToggleText={true} />
-        )
-      }
-    }
+    const YourReactApp = () => (
+      <TreeCheckbox nodes={nodes} showToggleText={true} />
+    )
