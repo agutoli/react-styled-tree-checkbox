@@ -61,7 +61,6 @@ class TreeCheckboxItem extends React.PureComponent {
       <ChildrenNodeWrapper data-children-node-wrapper key="children-node-wrapper">
         {children.map((node) => (
           <ChildNodeWrapper key={node.value} data-child-node-wrapper>
-            { console.log(selectedValues, node) }
             <InputCheckbox
               value={node.value}
               checked={selectedValues.has(node.value)}
