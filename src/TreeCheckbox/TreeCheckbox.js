@@ -25,7 +25,8 @@ class TreeCheckbox extends React.PureComponent {
     const {
       nodes,
       showToggleText,
-      showToggleArrow
+      showToggleArrow,
+      showChildrenLength
     } = this.props
 
     const { currentSelected } = this.state
@@ -38,6 +39,7 @@ class TreeCheckbox extends React.PureComponent {
             node={node}
             showToggleText={showToggleText}
             showToggleArrow={showToggleArrow}
+            showChildrenLength={showChildrenLength}
             collapsed={currentSelected != node.value}
             onToggleSelectAll={this.onToggleSelectAll} />
         ))}
@@ -48,12 +50,14 @@ class TreeCheckbox extends React.PureComponent {
 
 TreeCheckbox.propTypes = {
   nodes: PropTypes.array,
+  showChildrenLength: PropTypes.bool,
   showToggleText: PropTypes.bool,
   showToggleArrow: PropTypes.bool
 }
 
 TreeCheckbox.defaultProps = {
-  nodes: []
+  nodes: [],
+  showChildrenLength: false
 }
 
 export default TreeCheckbox

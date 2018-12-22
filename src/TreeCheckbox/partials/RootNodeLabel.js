@@ -1,18 +1,24 @@
 import styled from 'styled-components'
-import { varSize, varColor } from '../cssHelpers.js';
+import { autoCssGenerator } from '../cssHelpers.js';
 
-export default styled.label`
+const _default = autoCssGenerator('root-node-label');
+const _childrenLen = autoCssGenerator('root-node-label-children-len');
+
+export default styled.div`
+  ${_default('font-size')}
+  ${_default('font-weight')}
+  ${_default('font-family')}
+  ${_default('line-height')}
   user-select: none;
   cursor: pointer;
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-size: ${varSize('typograph-medium')};
-  line-height: 16px;
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
 
   .children-length {
-    color: ${varColor('gray-gray')};
+    ${_childrenLen('color')}
+    ${_childrenLen('font-size')}
+    ${_childrenLen('font-weight')}
     margin-left: 3px;
   }
 `

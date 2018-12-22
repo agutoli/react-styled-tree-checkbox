@@ -4,13 +4,14 @@ import PropTypes from 'prop-types'
 import ItemWrapper from './partials/ItemWrapper'
 import CollapseText from './partials/CollapseText'
 import ArrowCollapse from './partials/ArrowCollapse'
-import RootNodeLabel from './partials/RootNodeLabel'
+
 import InputCheckbox from './partials/InputCheckbox'
 import RootNodeWrapper from './partials/RootNodeWrapper'
 import ChildNodeWrapper from './partials/ChildNodeWrapper'
 import ChildrenNodeWrapper from './partials/ChildrenNodeWrapper'
 
-import childLabelRender from './renders/childLabelRender'
+import rootLabelRenderer from './renderers/rootLabelRenderer'
+import childLabelRenderer from './renderers/childLabelRenderer'
 
 class TreeCheckboxItem extends React.PureComponent {
   constructor(props) {
@@ -66,7 +67,7 @@ class TreeCheckboxItem extends React.PureComponent {
               checked={selectedValues.has(node.value)}
               id={`root-node-${node.value}`}
               onChange={this.onChangeChildField} />
-            {this.props.childLabelRender(node)}
+            {this.props.childLabelRenderer(node)}
           </ChildNodeWrapper>
         ))}
       </ChildrenNodeWrapper>
@@ -96,9 +97,10 @@ class TreeCheckboxItem extends React.PureComponent {
             checked={isAllSelected}
             onChange={this.onToggleSelectAll} />
           {node.icon}
-          <RootNodeLabel onClick={this.onToggleCollape} data-root-node-label>
-            {node.label}{' '}<span className="children-length">({node.children.length})</span>
-          </RootNodeLabel>
+          {this.props.rootLabelRenderer(node, this.props, {
+            onToggleCollape: this.onToggleCollape,
+            onToggleSelectAll: this.onToggleSelectAll
+          })}
           <CollapseText
             className="collapse-expand-menu"
             onClick={this.onToggleCollape}>
@@ -116,12 +118,14 @@ TreeCheckboxItem.propTypes = {
   showChanges: PropTypes.bool,
   showToggleArrow: PropTypes.bool,
   showToggleText: PropTypes.bool,
-  childLabelRender: PropTypes.func,
+  rootLabelRenderer: PropTypes.func,
+  childLabelRenderer: PropTypes.func,
   onToggleSelectAll: PropTypes.func,
 }
 
 TreeCheckboxItem.defaultProps = {
-  childLabelRender,
+  rootLabelRenderer,
+  childLabelRenderer,
   collapsed: false,
   showChanges: true,
   showToggleArrow: false,

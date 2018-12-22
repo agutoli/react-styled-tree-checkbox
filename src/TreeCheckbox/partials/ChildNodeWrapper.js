@@ -3,6 +3,6 @@ import { varColor } from '../cssHelpers.js';
 
 export default styled.div`
   display: flex;
-  margin-left: 24px;
-  margin-bottom: 0;
+  margin-left: 0px;
+  margin-bottom: 5px;
 `

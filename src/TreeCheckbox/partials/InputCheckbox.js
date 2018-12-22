@@ -3,10 +3,62 @@ import styled from 'styled-components'
 import { varColor } from '../cssHelpers.js';
 
 const Input = styled.input`
-  margin-right: 8px;
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+`
+
+const InputWrapper = styled.label`
+  display: block;
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 14px;
+  cursor: pointer;
+  font-size: 22px;
+  user-select: none;
+`
+
+const InputCheckmark = styled.span`
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 14px;
+  width: 14px;
+  background-color: #eee;
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 5px;
+    top: 2px;
+    width: 3px;
+    height: 6px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  ${InputWrapper}:hover ${Input} ~ & {
+    background-color: #ccc;
+  }
+
+  ${Input}:checked ~ && {
+    background-color: #2196F3;
+  }
+
+  ${Input}:checked ~ &:after {
+    display: block;
+  }
 `
 
 export default (props) => (
-  <Input {...props} type="checkbox" />
+  <InputWrapper>
+    <Input {...props} type="checkbox" />
+    <InputCheckmark className="checkmark" />
+  </InputWrapper>
 )

@@ -3,7 +3,7 @@ import { autoCssGenerator } from '../cssHelpers.js';
 
 const _default = autoCssGenerator('child-node-label');
 
-export default styled.label`
+export default styled.div`
   ${_default('font-size')}
   ${_default('font-family')}
   ${_default('line-height')}

@@ -10,15 +10,15 @@ function Node(value, label, icon, children = []) {
 }
 
 const nodes = [
-  Node(11, 'Facebook', <div name="facebook" />, [
-    Node(111, 'Face child 1'),
-    Node(112, 'Face child 2'),
-    Node(113, 'Face child 3')
+  Node(11, 'Root Node 1', <div name="facebook" />, [
+    Node(111, 'Child node 1.1'),
+    Node(112, 'Child node 1.2'),
+    Node(113, 'Child node 1.3')
   ]),
-  Node(12, 'Twitter', <div name="twitter" />, [
-    Node(121, 'TWT child 1'),
-    Node(122, 'TWT child 2'),
-    Node(123, 'TWT child 3')
+  Node(12, 'Root Node 2', <div name="twitter" />, [
+    Node(121, 'Child node 2.1'),
+    Node(122, 'Child node 2.2'),
+    Node(123, 'Child node 2.3')
   ]),
 ]
 
@@ -36,7 +36,7 @@ storiesOf('Molecule/TreeCheckbox', module)
     <div style={{margin: '20px', width: '100%'}}>
       <div>
         <div style={{margin: '20px', width: '90%', display: 'flex', justifyContent: 'space-around'}}>
-          <TreeCheckbox nodes={nodes} showToggleArrow={true} />
+          <TreeCheckbox nodes={nodes} showToggleArrow={true} showChildrenLength={true} />
         </div>
       </div>
     </div>

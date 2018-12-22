@@ -1,8 +1,10 @@
 import styled from 'styled-components'
-import { varColor } from '../cssHelpers.js';
+import { autoCssGenerator } from '../cssHelpers.js';
+
+const _default = autoCssGenerator('tree-checkbox-wrapper');
 
 export default styled.div`
-  margin-left: 24px;
+  ${_default('color')}
+  margin-left: 22px;
   margin-bottom: 24px;
-  color: red;
 `
