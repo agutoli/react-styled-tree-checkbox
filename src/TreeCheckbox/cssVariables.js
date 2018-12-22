@@ -5,9 +5,9 @@ module.exports = {
   'child-node-label__font-size': '14px',
   'child-node-label__line-height': '12px',
   'child-node-label__font-family': '"Open Sans", Helvetica, Arial, sans-serif',
-  'tree-checkbox-wrapper__color': '#314042',
+  'tree-checkbox-wrapper__color': '#999FAC',
 
-  'collapse-expand-label__color': '#1DACF2',
+  'collapse-expand-label__color': '#3C5A96',
   'collapse-expand-label__font-size': '12px',
 
   'root-node-label__font-family': fontFamily,

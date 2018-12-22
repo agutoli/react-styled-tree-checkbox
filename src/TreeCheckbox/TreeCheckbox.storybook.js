@@ -5,20 +5,27 @@ import backgrounds from "@storybook/addon-backgrounds";
 
 import TreeCheckbox from './TreeCheckbox'
 
+import FacebookBoxIcon from 'react-pretty-icons/icon/facebook-box'
+import TwitterBoxIcon from 'react-pretty-icons/icon/twitter-box'
+import InstagramIcon from 'react-pretty-icons/icon/instagram'
+
 function Node(value, label, icon, children = []) {
   return {value, label, icon, children}
 }
 
 const nodes = [
-  Node(11, 'Root Node 1', <div name="facebook" />, [
+  Node(11, 'Facebook', <FacebookBoxIcon style={{fill: '#4469B0'}} />, [
     Node(111, 'Child node 1.1'),
     Node(112, 'Child node 1.2'),
     Node(113, 'Child node 1.3')
   ]),
-  Node(12, 'Root Node 2', <div name="twitter" />, [
+  Node(12, 'Twitter', <TwitterBoxIcon style={{fill: '#3CA0F0'}} />, [
     Node(121, 'Child node 2.1'),
-    Node(122, 'Child node 2.2'),
-    Node(123, 'Child node 2.3')
+    Node(122, 'Child node 2.2')
+  ]),
+  Node(13, 'Twitter', <InstagramIcon style={{fill: '#F050A0'}} />, [
+    Node(131, 'Child node 3.1'),
+    Node(132, 'Child node 3.2')
   ]),
 ]
 

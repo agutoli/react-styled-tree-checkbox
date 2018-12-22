@@ -96,7 +96,7 @@ class TreeCheckboxItem extends React.PureComponent {
             value={node.value}
             checked={isAllSelected}
             onChange={this.onToggleSelectAll} />
-          {node.icon}
+          {node.icon ? <i className="tree-checkbox__icon">{node.icon}</i> : null}
           {this.props.rootLabelRenderer(node, this.props, {
             onToggleCollape: this.onToggleCollape,
             onToggleSelectAll: this.onToggleSelectAll

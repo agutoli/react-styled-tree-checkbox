@@ -14,4 +14,14 @@ export default styled.div`
   :hover .collapse-expand-menu {
     visibility: visible;
   }
+
+  > i {
+    margin-right: 3px;
+  }
+
+  > i,
+  > i svg {
+    width: 18px;
+    height: 18px;
+  }
 `

@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import { varColor } from '../cssHelpers.js';
+import { autoCssGenerator } from '../cssHelpers.js';
+
+const _default = autoCssGenerator('input-checkbox');
 
 const Input = styled.input`
   position: absolute;
@@ -13,8 +15,8 @@ const Input = styled.input`
 const InputWrapper = styled.label`
   display: block;
   position: relative;
-  padding-left: 20px;
-  margin-bottom: 14px;
+  padding-left: 24px;
+  margin-bottom: 16px;
   cursor: pointer;
   font-size: 22px;
   user-select: none;
@@ -26,7 +28,11 @@ const InputCheckmark = styled.span`
   left: 0;
   height: 14px;
   width: 14px;
-  background-color: #eee;
+  background-color: #F7F7F7;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #DFE3EE;
+  border-radius: 3px;
 
   &::after {
     content: "";
@@ -44,11 +50,12 @@ const InputCheckmark = styled.span`
   }
 
   ${InputWrapper}:hover ${Input} ~ & {
-    background-color: #ccc;
+    background-color: #DFE3EE;
   }
 
   ${Input}:checked ~ && {
-    background-color: #2196F3;
+    background-color: #8C9EC2;
+    border-color: #3C5A96;
   }
 
   ${Input}:checked ~ &:after {
