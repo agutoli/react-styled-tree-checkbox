@@ -39,22 +39,62 @@ Up to date with react/react-dom `16.7.0` and styled-components `4.1.3`
 
 ## Available CSS variables
 <pre>
-    --styled-<b>child-node-label</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-family">font-family</a>: "Open Sans", Helvetica, Arial, sans-serif;
-    --styled-<b>child-node-label</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-size">font-size</a>: 14px;
-    --styled-<b>child-node-label</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/line-height">line-height</a>: 12px;
-    --styled-<b>child-node-label</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/user-select">user-select</a>: none;
+--styled-<b>child-node-label</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-family">font-family</a>: "Open Sans", Helvetica, Arial, sans-serif;
+--styled-<b>child-node-label</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-size">font-size</a>: 14px;
+--styled-<b>child-node-label</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/line-height">line-height</a>: 12px;
+--styled-<b>child-node-label</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/user-select">user-select</a>: none;
 
-    --styled-<b>collapse-expand-label</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color">color</a>: #3C5A96;
-    --styled-<b>collapse-expand-label</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-size">font-size</a>: 12px;
+--styled-<b>child-node-wrapper</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin-bottom">margin-bottom</a>: 5px;
+--styled-<b>child-node-wrapper</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin-left">margin-left</a>: 4px;
 
-    --styled-<b>root-node-label-children-len</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color">color</a>: #ccc;
-    --styled-<b>root-node-label-children-len</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-size">font-size</a>: 12px;
-    --styled-<b>root-node-label-children-len</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight">font-weight</a>: normal;
+--styled-<b>children-node-wrapper</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin-bottom">margin-bottom</a>: 10px;
+--styled-<b>children-node-wrapper</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin-left">margin-left</a>: 20px;
 
-    --styled-<b>root-node-label</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-family">font-family</a>: Tahoma, Helvetica, Arial, sans-serif;
-    --styled-<b>root-node-label</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-size">font-size</a>: 14px;
-    --styled-<b>root-node-label</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight">font-weight</a>: normal;
-    --styled-<b>root-node-label</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/line-height">line-height</a>: 16px;
+--styled-<b>collapse-expand-label</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color">color</a>: #3C5A96;
+--styled-<b>collapse-expand-label</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-family">font-family</a>: "Open Sans", Helvetica, Arial, sans-serif;
+--styled-<b>collapse-expand-label</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-size">font-size</a>: 12px;
+--styled-<b>collapse-expand-label</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin-left">margin-left</a>: 5px;
+--styled-<b>collapse-expand-label</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/width">width</a>: 50px;
 
-    --styled-<b>tree-checkbox-wrapper</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color">color</a>: #999FAC;
+--styled-<b>input-checkbox-checkmark</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-color">background-color</a>: #F7F7F7;
+--styled-<b>input-checkbox-checkmark</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-color">background-color</a>--<b>checked</b>: #8C9EC2;
+--styled-<b>input-checkbox-checkmark</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-color">background-color</a>--<b>hover</b>: #DFE3EE;
+--styled-<b>input-checkbox-checkmark</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border">border</a>--<b>after</b>: solid white;
+--styled-<b>input-checkbox-checkmark</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-color">border-color</a>: #DFE3EE;
+--styled-<b>input-checkbox-checkmark</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-color">border-color</a>--<b>checked</b>: #3C5A96;
+--styled-<b>input-checkbox-checkmark</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius">border-radius</a>: 3px;
+--styled-<b>input-checkbox-checkmark</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-style">border-style</a>: solid;
+--styled-<b>input-checkbox-checkmark</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-width">border-width</a>: 1px;
+--styled-<b>input-checkbox-checkmark</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-width">border-width</a>--<b>after</b>: 0 2px 2px 0;
+--styled-<b>input-checkbox-checkmark</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/height">height</a>: 14px;
+--styled-<b>input-checkbox-checkmark</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/height">height</a>--<b>after</b>: 6px;
+--styled-<b>input-checkbox-checkmark</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/left">left</a>: 0;
+--styled-<b>input-checkbox-checkmark</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/left">left</a>--<b>after</b>: 5px;
+--styled-<b>input-checkbox-checkmark</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/top">top</a>: 0;
+--styled-<b>input-checkbox-checkmark</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/top">top</a>--<b>after</b>: 2px;
+--styled-<b>input-checkbox-checkmark</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/width">width</a>: 14px;
+--styled-<b>input-checkbox-checkmark</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/width">width</a>--<b>after</b>: 3px;
+
+--styled-<b>input-checkbox-wrapper</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-size">font-size</a>: 22px;
+--styled-<b>input-checkbox-wrapper</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin-bottom">margin-bottom</a>: 16px;
+--styled-<b>input-checkbox-wrapper</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/padding-left">padding-left</a>: 24px;
+--styled-<b>input-checkbox-wrapper</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/user-select">user-select</a>: none;
+
+--styled-<b>root-node-label-children-len</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color">color</a>: #ccc;
+--styled-<b>root-node-label-children-len</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-size">font-size</a>: 12px;
+--styled-<b>root-node-label-children-len</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight">font-weight</a>: normal;
+
+--styled-<b>root-node-label</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-family">font-family</a>: Tahoma, Helvetica, Arial, sans-serif;
+--styled-<b>root-node-label</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-size">font-size</a>: 14px;
+--styled-<b>root-node-label</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight">font-weight</a>: normal;
+--styled-<b>root-node-label</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/line-height">line-height</a>: 16px;
+
+--styled-<b>root-node-wrapper-svg</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/height">height</a>: 18px;
+--styled-<b>root-node-wrapper-svg</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/width">width</a>: 18px;
+
+--styled-<b>root-node-wrapper</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin-bottom">margin-bottom</a>: 12px;
+
+--styled-<b>tree-checkbox-wrapper</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color">color</a>: #999FAC;
+--styled-<b>tree-checkbox-wrapper</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin-bottom">margin-bottom</a>: 24px;
+--styled-<b>tree-checkbox-wrapper</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin-left">margin-left</a>: 22px;
 </pre>

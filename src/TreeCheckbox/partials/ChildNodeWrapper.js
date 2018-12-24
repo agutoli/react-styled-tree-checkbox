@@ -1,8 +1,11 @@
 import styled from 'styled-components'
-import { varColor } from '../cssHelpers.js';
+import { autoCssGenerator } from '../cssHelpers.js';
+
+const _default = autoCssGenerator('child-node-wrapper');
 
 export default styled.div`
   display: flex;
-  margin-left: 4px;
-  margin-bottom: 5px;
+  ${_default('margin-left')}
+  ${_default('margin-bottom')}
+
 `

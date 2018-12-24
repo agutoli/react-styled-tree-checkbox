@@ -24,6 +24,7 @@ class TreeCheckbox extends React.PureComponent {
   render() {
     const {
       nodes,
+      className,
       showToggleText,
       showToggleArrow,
       showChildrenLength
@@ -32,7 +33,7 @@ class TreeCheckbox extends React.PureComponent {
     const { currentSelected } = this.state
 
     return (
-      <TreeCheckboxWrapper>
+      <TreeCheckboxWrapper className={className}>
         {nodes.map((node) => (
           <TreeCheckboxItem
             key={`root-node-item-${node.value}`}

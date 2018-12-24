@@ -2,60 +2,61 @@ import React from 'react'
 import styled from 'styled-components'
 import { autoCssGenerator } from '../cssHelpers.js';
 
-const _default = autoCssGenerator('input-checkbox');
+const _inputWrapper = autoCssGenerator('input-checkbox-wrapper');
+const _inputCheckmark = autoCssGenerator('input-checkbox-checkmark');
 
 const Input = styled.input`
-  position: absolute;
+  width: 0;
+  height: 0;
   opacity: 0;
   cursor: pointer;
-  height: 0;
-  width: 0;
+  position: absolute;
 `
 
 const InputWrapper = styled.label`
   display: block;
-  position: relative;
-  padding-left: 24px;
-  margin-bottom: 16px;
   cursor: pointer;
-  font-size: 22px;
-  user-select: none;
+  position: relative;
+
+  ${_inputWrapper('font-size')}
+  ${_inputWrapper('user-select')}
+  ${_inputWrapper('padding-left')}
+  ${_inputWrapper('margin-bottom')}
 `
 
 const InputCheckmark = styled.span`
   position: absolute;
-  top: 0;
-  left: 0;
-  height: 14px;
-  width: 14px;
-  background-color: #F7F7F7;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #DFE3EE;
-  border-radius: 3px;
+  ${_inputCheckmark('top')}
+  ${_inputCheckmark('left')}
+  ${_inputCheckmark('height')}
+  ${_inputCheckmark('width')}
+  ${_inputCheckmark('background-color')}
+  ${_inputCheckmark('border-width')}
+  ${_inputCheckmark('border-style')}
+  ${_inputCheckmark('border-color')}
+  ${_inputCheckmark('border-radius')}
 
   &::after {
     content: "";
-    position: absolute;
     display: none;
-    left: 5px;
-    top: 2px;
-    width: 3px;
-    height: 6px;
-    border: solid white;
-    border-width: 0 2px 2px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
+    position: absolute;
     transform: rotate(45deg);
+
+    ${_inputCheckmark('left', 'after')}
+    ${_inputCheckmark('top', 'after')}
+    ${_inputCheckmark('width', 'after')}
+    ${_inputCheckmark('height', 'after')}
+    ${_inputCheckmark('border', 'after')}
+    ${_inputCheckmark('border-width', 'after')}
   }
 
   ${InputWrapper}:hover ${Input} ~ & {
-    background-color: #DFE3EE;
+    ${_inputCheckmark('background-color', 'hover')}
   }
 
   ${Input}:checked ~ && {
-    background-color: #8C9EC2;
-    border-color: #3C5A96;
+    ${_inputCheckmark('border-color', 'checked')}
+    ${_inputCheckmark('background-color', 'checked')}
   }
 
   ${Input}:checked ~ &:after {

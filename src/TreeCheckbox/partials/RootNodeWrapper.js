@@ -1,11 +1,15 @@
 import styled from 'styled-components'
-import { varColor } from '../cssHelpers.js';
+import { autoCssGenerator } from '../cssHelpers.js';
+
+const _default = autoCssGenerator('root-node-wrapper');
+const _defaultSVG = autoCssGenerator('root-node-label-children-len');
 
 export default styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-bottom: 12px;
+  ${_default('margin-bottom')}
+
 
   .collapse-expand-menu {
     visibility: hidden;
@@ -21,7 +25,7 @@ export default styled.div`
 
   > i,
   > i svg {
-    width: 18px;
-    height: 18px;
+    ${_defaultSVG('width')}
+    ${_defaultSVG('height')}
   }
 `

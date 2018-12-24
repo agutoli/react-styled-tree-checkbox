@@ -5,15 +5,16 @@ const _default = autoCssGenerator('root-node-label');
 const _childrenLen = autoCssGenerator('root-node-label-children-len');
 
 export default styled.div`
+  display: flex;
+  cursor: pointer;
+  user-select: none;
+  flex-direction: row;
+  align-items: center;
+
   ${_default('font-size')}
   ${_default('font-weight')}
   ${_default('font-family')}
   ${_default('line-height')}
-  user-select: none;
-  cursor: pointer;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
 
   .children-length {
     ${_childrenLen('color')}

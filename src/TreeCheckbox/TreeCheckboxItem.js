@@ -17,8 +17,10 @@ class TreeCheckboxItem extends React.PureComponent {
   constructor(props) {
     super(props)
 
+    const checkedNodes = props.node.children.filter(x => x.checked).map(x => x.value)
+
     this.state = {
-      selectedValues: new Set([]),
+      selectedValues: new Set(checkedNodes),
       collapsed: props.collapsed
     }
 
@@ -79,6 +81,7 @@ class TreeCheckboxItem extends React.PureComponent {
 
   render() {
     const { collapsed, selectedValues } = this.state
+
     const {
       node,
       showToggleArrow,

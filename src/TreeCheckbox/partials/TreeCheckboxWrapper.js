@@ -5,6 +5,7 @@ const _default = autoCssGenerator('tree-checkbox-wrapper');
 
 export default styled.div`
   ${_default('color')}
-  margin-left: 22px;
-  margin-bottom: 24px;
+  ${_default('margin-left')}
+  ${_default('margin-bottom')}
+
 `

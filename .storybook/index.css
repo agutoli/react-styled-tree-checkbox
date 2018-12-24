@@ -4,8 +4,6 @@ input {
   padding: 20px;
 }
 
-.secondary {
-  --styled-tree-checkbox__background-color: black;
-  --styled-tree-checkbox__border-width: 3px;
-  --styled-tree-checkbox__control-border-color: red;
+.red-theme {
+  --styled-tree-checkbox-wrapper__color: red;
 }
