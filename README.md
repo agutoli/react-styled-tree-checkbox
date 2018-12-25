@@ -12,31 +12,69 @@ Up to date with react/react-dom `16.7.0` and styled-components `4.1.3`
 #### Screenshot Example
 ![](https://i.ibb.co/hyMgSJ4/Screen-Shot-2018-12-22-at-19-17-03.png)
 
+
+#### CSS Vanilla Themes
+![](https://i.ibb.co/K9cVmhW/Screen-Shot-2018-12-24-at-22-12-48.png)
+
+```css
+/** Example css **/
+
+.red-theme {
+  --styled-input-checkbox-checkmark__border-radius: 0;
+  --styled-tree-checkbox-wrapper__color: #999;
+  --styled-input-checkbox-checkmark__border-color--checked: red;
+  --styled-input-checkbox-checkmark__background-color--checked: red;
+  --styled-input-checkbox-checkmark__border-color: red;
+  --styled-input-checkbox-checkmark__background-color: white;
+  --styled-input-checkbox-checkmark__background-color--hover: #f9c7c7;
+}
+
+.blue-theme {
+  --styled-input-checkbox-checkmark__border-radius: 10px;
+  --styled-tree-checkbox-wrapper__color: #999;
+  --styled-input-checkbox-checkmark__border-color--checked: blue;
+  --styled-input-checkbox-checkmark__background-color--checked: blue;
+  --styled-input-checkbox-checkmark__border-color: blue;
+  --styled-input-checkbox-checkmark__background-color: white;
+  --styled-input-checkbox-checkmark__background-color--hover: #d1d1f9;
+}
+
+.green-theme {
+  --styled-input-checkbox-checkmark__border-radius: 0;
+  --styled-tree-checkbox-wrapper__color: #999;
+  --styled-input-checkbox-checkmark__border-color--checked: green;
+  --styled-input-checkbox-checkmark__background-color--checked: green;
+  --styled-input-checkbox-checkmark__border-color: green;
+  --styled-input-checkbox-checkmark__background-color: white;
+  --styled-input-checkbox-checkmark__background-color--hover: #cbf2cb;
+}
+```
+
 ## Example Usage
+```js
+import React from 'react'
+import TreeCheckbox from 'react-styled-tree-checkbox'
 
-    import React from 'react'
-    import TreeCheckbox from 'react-styled-tree-checkbox'
-
-    const nodes = [
+const nodes = [
+  {
+    "value": 11,
+    "label": "Facebook",
+    "icon": "<YourIcon/>",
+    "children": [
       {
-        "value": 11,
-        "label": "Facebook",
-        "icon": "<YourIcon/>",
-        "children": [
-          {
-            "value": 111,
-            "label": "Child node 1.1"
-          },
-          ...
-        ]
+        "value": 111,
+        "label": "Child node 1.1"
       },
       ...
     ]
+  },
+  ...
+]
 
-    const YourReactApp = () => (
-      <TreeCheckbox nodes={nodes} showToggleText={true} />
-    )
-
+const YourReactApp = () => (
+  <TreeCheckbox nodes={nodes} showToggleText={true} />
+)
+```
 ## Available CSS variables
 <pre>
 --styled-<b>child-node-label</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-family">font-family</a>: "Open Sans", Helvetica, Arial, sans-serif;

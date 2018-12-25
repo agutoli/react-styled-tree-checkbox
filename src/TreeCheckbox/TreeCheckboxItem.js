@@ -27,6 +27,7 @@ class TreeCheckboxItem extends React.PureComponent {
     this.onToggleCollape = this._onToggleCollape.bind(this)
     this.onChangeChildField = this._onChangeChildField.bind(this)
     this.onToggleSelectAll = this._onToggleSelectAll.bind(this)
+
   }
 
   _onToggleCollape() {
@@ -41,19 +42,30 @@ class TreeCheckboxItem extends React.PureComponent {
     this.setState({ selectedValues: new Set(selectedValues) })
   }
 
+  selectAllItems(node) {
+    const { selectedValues } = this.state
+    node.children.map((child) => selectedValues.add(parseInt(child.value)))
+    this.setState({ selectedValues: new Set(selectedValues) })
+  }
+
+  unselectAllItems(node) {
+    const { selectedValues } = this.state
+    selectedValues.clear()
+    this.setState({ selectedValues: new Set(selectedValues) })
+  }
+
   _onToggleSelectAll(event) {
     const { node } = this.props
     const { selectedValues } = this.state
 
     if (!event.target.checked) {
-      selectedValues.clear()
+      this.unselectAllItems(node)
     }
 
     if (event.target.checked) {
-      node.children.map((child) => selectedValues.add(parseInt(child.value)))
+      this.selectAllItems(node)
     }
 
-    this.setState({ selectedValues: new Set(selectedValues) })
     this.props.onToggleSelectAll(event)
   }
 
@@ -112,6 +124,14 @@ class TreeCheckboxItem extends React.PureComponent {
         {this.renderChildren(node.children)}
       </ItemWrapper>
     )
+  }
+
+  componentDidMount() {
+    setTimeout(() => {
+      if (this.props.node.checked) {
+        this.selectAllItems(this.props.node)
+      }
+    }, 1)
   }
 }
 
