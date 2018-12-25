@@ -50,6 +50,15 @@ Up to date with react/react-dom `16.7.0` and styled-components `4.1.3`
 }
 ```
 
+```html
+<!-- JSX example -->
+<div>
+  <TreeCheckbox nodes={nodes} showToggleText={true} className="blue-theme" />
+  <TreeCheckbox nodes={nodes} showToggleText={true} className="green-theme" />
+  <TreeCheckbox nodes={nodes} showToggleText={true} className="red-theme" />
+</div>
+```
+
 ## Example Usage
 ```js
 import React from 'react'
