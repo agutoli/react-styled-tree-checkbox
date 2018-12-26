@@ -30,7 +30,6 @@
     "tree",
     "checkbox",
     "css-modules",
-    "shadow dom",
     "component"
   ],
   "nyc": {

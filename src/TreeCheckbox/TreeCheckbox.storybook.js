@@ -35,11 +35,11 @@ storiesOf('Molecule/TreeCheckbox', module)
       <div>
         <div style={{margin: '20px', width: '90%', display: 'flex', justifyContent: 'space-around'}}>
           <div>
-            <h2>Red Theme</h2>
+            <h2>Blue Theme</h2>
             <TreeCheckbox nodes={nodes} showToggleText={true} className="blue-theme" />
           </div>
           <div>
-            <h2>Blue Theme</h2>
+            <h2>Red Theme</h2>
             <TreeCheckbox nodes={nodes} showToggleText={true} className="red-theme" />
           </div>
           <div>
