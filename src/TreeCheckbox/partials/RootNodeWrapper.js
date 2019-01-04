@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { autoCssGenerator } from '../cssHelpers.js';
 
 const _default = autoCssGenerator('root-node-wrapper');
-const _defaultSVG = autoCssGenerator('root-node-label-children-len');
+const _defaultSVG = autoCssGenerator('root-node-wrapper-svg');
 
 export default styled.div`
   display: flex;
