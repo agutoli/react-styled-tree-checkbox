@@ -5,31 +5,16 @@ input {
 }
 
 .red-theme {
-  --styled-input-checkbox-checkmark__border-radius: 0;
-  --styled-tree-checkbox-wrapper__color: #999;
-  --styled-input-checkbox-checkmark__border-color--checked: red;
-  --styled-input-checkbox-checkmark__background-color--checked: red;
-  --styled-input-checkbox-checkmark__border-color: red;
-  --styled-input-checkbox-checkmark__background-color: white;
-  --styled-input-checkbox-checkmark__background-color--hover: #f9c7c7;
+  --styled-input-checkbox-checkmark__border-color--after: red;
+  --styled-input-checkbox-checkmark__border-color--checked-hover: red;
 }
 
 .blue-theme {
-  --styled-input-checkbox-checkmark__border-radius: 10px;
-  --styled-tree-checkbox-wrapper__color: #999;
-  --styled-input-checkbox-checkmark__border-color--checked: blue;
-  --styled-input-checkbox-checkmark__background-color--checked: blue;
-  --styled-input-checkbox-checkmark__border-color: blue;
-  --styled-input-checkbox-checkmark__background-color: white;
-  --styled-input-checkbox-checkmark__background-color--hover: #d1d1f9;
+  --styled-input-checkbox-checkmark__border-color--after: blue;
+  --styled-input-checkbox-checkmark__border-color--checked-hover: blue;
 }
 
 .green-theme {
-  --styled-input-checkbox-checkmark__border-radius: 0;
-  --styled-tree-checkbox-wrapper__color: #999;
-  --styled-input-checkbox-checkmark__border-color--checked: green;
-  --styled-input-checkbox-checkmark__background-color--checked: green;
-  --styled-input-checkbox-checkmark__border-color: green;
-  --styled-input-checkbox-checkmark__background-color: white;
-  --styled-input-checkbox-checkmark__background-color--hover: #cbf2cb;
+  --styled-input-checkbox-checkmark__border-color--after: green;
+  --styled-input-checkbox-checkmark__border-color--checked-hover: green;
 }

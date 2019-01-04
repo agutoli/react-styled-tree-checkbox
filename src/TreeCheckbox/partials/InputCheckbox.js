@@ -46,17 +46,23 @@ const InputCheckmark = styled.span`
     ${_inputCheckmark('top', 'after')}
     ${_inputCheckmark('width', 'after')}
     ${_inputCheckmark('height', 'after')}
-    ${_inputCheckmark('border', 'after')}
+    ${_inputCheckmark('border-style', 'after')}
+    ${_inputCheckmark('border-color', 'after')}
     ${_inputCheckmark('border-width', 'after')}
   }
 
   ${InputWrapper}:hover ${Input} ~ & {
+    ${_inputCheckmark('border-color', 'hover')}
     ${_inputCheckmark('background-color', 'hover')}
   }
 
   ${Input}:checked ~ && {
     ${_inputCheckmark('border-color', 'checked')}
     ${_inputCheckmark('background-color', 'checked')}
+  }
+
+  ${Input}:checked ~ &&:hover {
+    ${_inputCheckmark('border-color', 'checked-hover')}
   }
 
   ${Input}:checked ~ &:after {

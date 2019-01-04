@@ -40,26 +40,27 @@ module.exports = {
   'input-checkbox-checkmark__left': '0',
   'input-checkbox-checkmark__height': '14px',
   'input-checkbox-checkmark__width': '14px',
-  'input-checkbox-checkmark__background-color': '#F7F7F7',
+  'input-checkbox-checkmark__background-color': 'white',
   'input-checkbox-checkmark__border-width': '1px',
   'input-checkbox-checkmark__border-style': 'solid',
   'input-checkbox-checkmark__border-color': '#DFE3EE',
-  'input-checkbox-checkmark__border-radius': '3px',
+  'input-checkbox-checkmark__border-radius': '0',
 
   'input-checkbox-checkmark__left--after': '5px',
   'input-checkbox-checkmark__top--after': '2px',
   'input-checkbox-checkmark__width--after': '3px',
   'input-checkbox-checkmark__height--after': '6px',
-  'input-checkbox-checkmark__border--after': 'solid white',
+  'input-checkbox-checkmark__border-style--after': 'solid',
+  'input-checkbox-checkmark__border-color--after': '#3e8ab4',
   'input-checkbox-checkmark__border-width--after': '0 2px 2px 0',
 
-  'input-checkbox-checkmark__background-color--hover': '#DFE3EE',
-
-  'input-checkbox-checkmark__border-color--checked': '#3C5A96',
-  'input-checkbox-checkmark__background-color--checked': '#8C9EC2',
+  'input-checkbox-checkmark__border-color--hover': '#CBCBCB',
+  'input-checkbox-checkmark__background-color--hover': 'white',
+  'input-checkbox-checkmark__border-color--checked': '#CBCBCB',
+  'input-checkbox-checkmark__border-color--checked-hover': '#3e8ab4',
+  'input-checkbox-checkmark__background-color--checked': 'white',
 
   'root-node-wrapper__margin-bottom': '12px',
   'root-node-wrapper-svg__width': '18px',
   'root-node-wrapper-svg__height': '18px',
-
 }

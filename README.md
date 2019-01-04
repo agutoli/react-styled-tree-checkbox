@@ -22,35 +22,19 @@ Up to date with react/react-dom `16.7.0` and styled-components `4.1.3`
 
 ```css
 /** Example css **/
-
 .red-theme {
-  --styled-input-checkbox-checkmark__border-radius: 0;
-  --styled-tree-checkbox-wrapper__color: #999;
-  --styled-input-checkbox-checkmark__border-color--checked: red;
-  --styled-input-checkbox-checkmark__background-color--checked: red;
-  --styled-input-checkbox-checkmark__border-color: red;
-  --styled-input-checkbox-checkmark__background-color: white;
-  --styled-input-checkbox-checkmark__background-color--hover: #f9c7c7;
+  --styled-input-checkbox-checkmark__border-color--after: red;
+  --styled-input-checkbox-checkmark__border-color--checked-hover: red;
 }
 
 .blue-theme {
-  --styled-input-checkbox-checkmark__border-radius: 10px;
-  --styled-tree-checkbox-wrapper__color: #999;
-  --styled-input-checkbox-checkmark__border-color--checked: blue;
-  --styled-input-checkbox-checkmark__background-color--checked: blue;
-  --styled-input-checkbox-checkmark__border-color: blue;
-  --styled-input-checkbox-checkmark__background-color: white;
-  --styled-input-checkbox-checkmark__background-color--hover: #d1d1f9;
+  --styled-input-checkbox-checkmark__border-color--after: blue;
+  --styled-input-checkbox-checkmark__border-color--checked-hover: blue;
 }
 
 .green-theme {
-  --styled-input-checkbox-checkmark__border-radius: 0;
-  --styled-tree-checkbox-wrapper__color: #999;
-  --styled-input-checkbox-checkmark__border-color--checked: green;
-  --styled-input-checkbox-checkmark__background-color--checked: green;
-  --styled-input-checkbox-checkmark__border-color: green;
-  --styled-input-checkbox-checkmark__background-color: white;
-  --styled-input-checkbox-checkmark__background-color--hover: #cbf2cb;
+  --styled-input-checkbox-checkmark__border-color--after: green;
+  --styled-input-checkbox-checkmark__border-color--checked-hover: green;
 }
 ```
 
@@ -107,14 +91,17 @@ const YourReactApp = () => (
 --styled-<b>collapse-expand-label</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin-left">margin-left</a>: 5px;
 --styled-<b>collapse-expand-label</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/width">width</a>: 50px;
 
---styled-<b>input-checkbox-checkmark</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-color">background-color</a>: #F7F7F7;
---styled-<b>input-checkbox-checkmark</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-color">background-color</a>--<b>checked</b>: #8C9EC2;
---styled-<b>input-checkbox-checkmark</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-color">background-color</a>--<b>hover</b>: #DFE3EE;
---styled-<b>input-checkbox-checkmark</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border">border</a>--<b>after</b>: solid white;
+--styled-<b>input-checkbox-checkmark</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-color">background-color</a>: white;
+--styled-<b>input-checkbox-checkmark</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-color">background-color</a>--<b>checked</b>: white;
+--styled-<b>input-checkbox-checkmark</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-color">background-color</a>--<b>hover</b>: white;
 --styled-<b>input-checkbox-checkmark</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-color">border-color</a>: #DFE3EE;
---styled-<b>input-checkbox-checkmark</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-color">border-color</a>--<b>checked</b>: #3C5A96;
---styled-<b>input-checkbox-checkmark</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius">border-radius</a>: 3px;
+--styled-<b>input-checkbox-checkmark</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-color">border-color</a>--<b>after</b>: #3e8ab4;
+--styled-<b>input-checkbox-checkmark</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-color">border-color</a>--<b>checked</b>: #CBCBCB;
+--styled-<b>input-checkbox-checkmark</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-color">border-color</a>--<b>checked-hover</b>: #3e8ab4;
+--styled-<b>input-checkbox-checkmark</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-color">border-color</a>--<b>hover</b>: #CBCBCB;
+--styled-<b>input-checkbox-checkmark</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius">border-radius</a>: 0;
 --styled-<b>input-checkbox-checkmark</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-style">border-style</a>: solid;
+--styled-<b>input-checkbox-checkmark</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-style">border-style</a>--<b>after</b>: solid;
 --styled-<b>input-checkbox-checkmark</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-width">border-width</a>: 1px;
 --styled-<b>input-checkbox-checkmark</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-width">border-width</a>--<b>after</b>: 0 2px 2px 0;
 --styled-<b>input-checkbox-checkmark</b>__<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/height">height</a>: 14px;

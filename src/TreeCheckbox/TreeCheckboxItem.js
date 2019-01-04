@@ -70,16 +70,24 @@ class TreeCheckboxItem extends React.PureComponent {
   }
 
   renderChildren(children) {
+    const { showNativeStyle } = this.props
     const { collapsed, selectedValues } = this.state
     return (
       <ChildrenNodeWrapper data-children-node-wrapper key="children-node-wrapper">
         {children.map((node) => (
           <ChildNodeWrapper key={node.value} data-child-node-wrapper>
+          {showNativeStyle ?
+            <input
+              id={`child-node-${node.value}`}
+              type="checkbox"
+              value={node.value}
+              onChange={this.onChangeChildField} /> :
             <InputCheckbox
+              id={`child-node-${node.value}`}
               value={node.value}
               checked={selectedValues.has(node.value)}
-              id={`root-node-${node.value}`}
               onChange={this.onChangeChildField} />
+            }
             {this.props.childLabelRenderer(node)}
           </ChildNodeWrapper>
         ))}
@@ -97,7 +105,8 @@ class TreeCheckboxItem extends React.PureComponent {
     const {
       node,
       showToggleArrow,
-      showToggleText
+      showToggleText,
+      showNativeStyle
     } = this.props
 
     const isAllSelected = selectedValues.size === node.children.length
@@ -106,11 +115,15 @@ class TreeCheckboxItem extends React.PureComponent {
       <ItemWrapper collapsed={collapsed}>
         <RootNodeWrapper key={node.value} data-root-node-wrapper>
           {showToggleArrow ? <ArrowCollapse collapsed={collapsed} onClick={this.onToggleCollape} /> : null}
-          <InputCheckbox
-            value={node.value}
-            checked={isAllSelected}
-            onChange={this.onToggleSelectAll} />
-          {node.icon ? <i className="tree-checkbox__icon">{node.icon}</i> : null}
+          {showNativeStyle ?
+            <input id={`root-node-${node.value}`} type="checkbox" value={node.value} onChange={this.onToggleSelectAll} /> :
+            <InputCheckbox
+              id={`root-node-${node.value}`}
+              value={node.value}
+              checked={isAllSelected}
+              onChange={this.onToggleSelectAll} />
+          }
+          {node.icon}
           {this.props.rootLabelRenderer(node, this.props, {
             onToggleCollape: this.onToggleCollape,
             onToggleSelectAll: this.onToggleSelectAll
@@ -152,6 +165,7 @@ TreeCheckboxItem.defaultProps = {
   showChanges: true,
   showToggleArrow: false,
   showToggleText: false,
+  showNativeStyle: false,
   onToggleSelectAll: () => {}
 }
 

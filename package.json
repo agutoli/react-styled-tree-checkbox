@@ -1,6 +1,6 @@
 {
   "name": "react-styled-tree-checkbox",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "",
   "main": "lib/index.js",
   "repository": "https://github.com/agutoli/react-styled-tree-checkbox.git",
@@ -79,7 +79,6 @@
     "react-dom": "^16.7.0",
     "react-pretty-icons": "0.0.13",
     "sinon": "^2.3.5",
-    "styled-components": "^4.1.3",
     "stylelint": "^7.11.1",
     "stylelint-config-standard": "^16.0.0",
     "webpack": "^3.4.1",
@@ -91,7 +90,8 @@
     "styled-components": "2.1.1 - 4.x"
   },
   "dependencies": {
-    "prop-types": "15.6.1"
+    "prop-types": "15.6.1",
+    "styled-components": "^4.1.3"
   },
   "jest": {
     "setupTestFrameworkScriptFile": "./test/browser.js",

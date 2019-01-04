@@ -4,7 +4,7 @@ import { autoCssGenerator } from '../cssHelpers.js';
 const _default = autoCssGenerator('root-node-label');
 const _childrenLen = autoCssGenerator('root-node-label-children-len');
 
-export default styled.div`
+export default styled.label`
   display: flex;
   cursor: pointer;
   user-select: none;

@@ -27,6 +27,7 @@ class TreeCheckbox extends React.PureComponent {
       className,
       showToggleText,
       showToggleArrow,
+      showNativeStyle,
       showChildrenLength
     } = this.props
 
@@ -38,6 +39,7 @@ class TreeCheckbox extends React.PureComponent {
           <TreeCheckboxItem
             key={`root-node-item-${node.value}`}
             node={node}
+            showNativeStyle={showNativeStyle}
             showToggleText={showToggleText}
             showToggleArrow={showToggleArrow}
             showChildrenLength={showChildrenLength}

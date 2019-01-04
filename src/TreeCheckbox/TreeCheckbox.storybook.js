@@ -59,3 +59,12 @@ storiesOf('Molecule/TreeCheckbox', module)
       </div>
     </div>
   ))
+  .add('showNativeStyle=true', () => (
+    <div style={{margin: '20px', width: '100%'}}>
+      <div>
+        <div style={{margin: '20px', width: '90%', display: 'flex', justifyContent: 'space-around'}}>
+          <TreeCheckbox nodes={nodes} showNativeStyle={true} />
+        </div>
+      </div>
+    </div>
+  ))

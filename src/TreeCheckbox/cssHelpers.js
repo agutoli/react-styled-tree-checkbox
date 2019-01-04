@@ -22,17 +22,3 @@ export const varSize = function SizePrefix(suffix) {
     var(--styled-size-${suffix});
   `;
 }
-
-
-// export const cssVar = function CSSVar(prefix) {
-//   return function (property, pseudoClass) {
-//     const suffix = pseudoClass ? `--${pseudoClass}` : '';
-//     const varname = `${prefix}__${property}${suffix}`;
-//     return variables[varname];
-//   };
-// }
-//
-// export const globalCssVar = function GlobalCSSVar(property, pseudoClass) {
-//   const suffix = pseudoClass ? `--${pseudoClass}` : '';
-//   return variables[`tree-checkbox__${property}${suffix}`];
-// }
