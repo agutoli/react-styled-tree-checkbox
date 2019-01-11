@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import {FormattedMessage} from 'react-intl';
 
 import ItemWrapper from './partials/ItemWrapper'
 import CollapseText from './partials/CollapseText'
@@ -131,7 +132,11 @@ class TreeCheckboxItem extends React.PureComponent {
           <CollapseText
             className="collapse-expand-menu"
             onClick={this.onToggleCollape}>
-            {showToggleText ? collapsed ? 'expand' : 'collapse': null}
+            {showToggleText ? collapsed ? (
+              <FormattedMessage id="Expand" defaultMessage={`Expand`} />
+            ) : (
+              <FormattedMessage id="Collapse" defaultMessage={`Collapse`} />
+            ): null}
           </CollapseText>
         </RootNodeWrapper>
         {this.renderChildren(node.children)}
