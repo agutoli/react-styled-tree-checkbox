@@ -28,7 +28,6 @@ class TreeCheckboxItem extends React.PureComponent {
     this.onToggleCollape = this._onToggleCollape.bind(this)
     this.onChangeChildField = this._onChangeChildField.bind(this)
     this.onToggleSelectAll = this._onToggleSelectAll.bind(this)
-
   }
 
   _onToggleCollape() {
@@ -38,9 +37,12 @@ class TreeCheckboxItem extends React.PureComponent {
   }
 
   _onChangeChildField({ target }) {
+    const { node } = this.props
     const { selectedValues } = this.state
     selectedValues[target.checked ? 'add': 'delete'](parseInt(target.value))
-    this.setState({ selectedValues: new Set(selectedValues) })
+    this.setState({ selectedValues: new Set(selectedValues) }, () => {
+      this.props.onChange(node.value, Array.from(this.state.selectedValues))
+    })
   }
 
   selectAllItems(node) {
@@ -68,6 +70,7 @@ class TreeCheckboxItem extends React.PureComponent {
     }
 
     this.props.onToggleSelectAll(event)
+    this.props.onChange(node.value, Array.from(this.state.selectedValues))
   }
 
   renderChildren(children) {
@@ -154,6 +157,7 @@ class TreeCheckboxItem extends React.PureComponent {
 }
 
 TreeCheckboxItem.propTypes = {
+  onChange: PropTypes.func,
   collapsed: PropTypes.bool,
   showChanges: PropTypes.bool,
   showToggleArrow: PropTypes.bool,
@@ -164,6 +168,7 @@ TreeCheckboxItem.propTypes = {
 }
 
 TreeCheckboxItem.defaultProps = {
+  onChange: () => {},
   rootLabelRenderer,
   childLabelRenderer,
   collapsed: false,

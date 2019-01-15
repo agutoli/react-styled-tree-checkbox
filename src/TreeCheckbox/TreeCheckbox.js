@@ -9,15 +9,33 @@ class TreeCheckbox extends React.PureComponent {
     super(props)
 
     this.state = {
+      checkedItems: this.getInitialCheckedItems(props),
       currentSelected: null
     }
 
     this.onToggleSelectAll = this._onToggleSelectAll.bind(this)
+    this.onChangeItems = this._onChangeItems.bind(this)
+  }
+
+  getInitialCheckedItems(props) {
+    return props.nodes.reduce((s, c) => {
+      s[c.value] = c.children.filter(x => x.checked).map(x => x.value)
+      return s
+    }, {})
   }
 
   _onToggleSelectAll(event) {
     this.setState({
       currentSelected: event.target.value
+    })
+  }
+
+  _onChangeItems(rootId, items) {
+    this.state.checkedItems[rootId] = items
+    this.setState({
+      checkedItems: this.state.checkedItems
+    }, () => {
+      this.props.onChange(this.state.checkedItems)
     })
   }
 
@@ -31,7 +49,7 @@ class TreeCheckbox extends React.PureComponent {
       showChildrenLength
     } = this.props
 
-    const { currentSelected } = this.state
+    const { currentSelected, checkedItems } = this.state
 
     return (
       <TreeCheckboxWrapper className={className}>
@@ -39,6 +57,7 @@ class TreeCheckbox extends React.PureComponent {
           <TreeCheckboxItem
             key={`root-node-item-${node.value}`}
             node={node}
+            onChange={this.onChangeItems}
             showNativeStyle={showNativeStyle}
             showToggleText={showToggleText}
             showToggleArrow={showToggleArrow}
@@ -53,6 +72,7 @@ class TreeCheckbox extends React.PureComponent {
 
 TreeCheckbox.propTypes = {
   nodes: PropTypes.array,
+  onChange: PropTypes.func,
   showChildrenLength: PropTypes.bool,
   showToggleText: PropTypes.bool,
   showToggleArrow: PropTypes.bool
@@ -60,6 +80,7 @@ TreeCheckbox.propTypes = {
 
 TreeCheckbox.defaultProps = {
   nodes: [],
+  onChange: () => {},
   showChildrenLength: false
 }
 
