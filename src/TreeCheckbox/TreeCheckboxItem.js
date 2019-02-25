@@ -129,8 +129,7 @@ class TreeCheckboxItem extends React.PureComponent {
           }
           {node.icon}
           {this.props.rootLabelRenderer(node, this.props, {
-            onToggleCollape: this.onToggleCollape,
-            onToggleSelectAll: this.onToggleSelectAll
+            onToggleCollape: this.onToggleCollape
           })}
           <CollapseText
             className="collapse-expand-menu"
